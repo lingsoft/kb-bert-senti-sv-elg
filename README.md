@@ -17,16 +17,9 @@ source  kb-senti-elg-venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
 
-The model can be downloaded to local (optional), because the transformers library downloads and caches the model anyway.
-```python shell
-from transformers import pipeline
-sa = pipeline(
-    task='sentiment-analysis',
-    model='marma/bert-base-swedish-cased-sentiment
-)
-# Save pipeline
-path = 'local_kb_bert_senti'
-sa.save_pretrained(path)
+The model can be downloaded to local (optional)
+```
+python3 load_model.py
 ```
 
 Run the development mode flask app
