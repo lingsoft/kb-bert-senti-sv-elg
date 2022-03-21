@@ -34,7 +34,7 @@ docker build -t kb-senti-elg .
 ```
 
 
-Or pull directly ready-made image `docker pull lingsoft/kb-senti:tagname`.
+Or pull directly ready-made image `docker pull lingsoft/kb-bert-senti-sv:tagname`.
 
 ## Deploying the service
 
