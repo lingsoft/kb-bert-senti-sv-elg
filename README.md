@@ -106,7 +106,7 @@ curl --location --request POST 'http://localhost:8000/process' \
 
 ### Response should be
 
-```json
+```
 {
   "response": {
     "type": "classification",
