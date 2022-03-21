@@ -96,12 +96,7 @@ For text request
 ### Example call
 
 ```
-curl --location --request POST 'http://localhost:8000/process' \
---header 'Content-Type: application/json' \
---data-raw '{
-"type":"text",
-"content": "Lätt att boka. Resan blev inställt. Fick tillbaka pengar. Topp service"
-}'
+curl -d '{"type":"text", "content":"Lätt att boka. Resan blev inställt. Fick tillbaka pengar. Topp service"}' -H "Content-Type: application/json" -X POST http://localhost:8000/process
 ```
 
 ### Response should be
