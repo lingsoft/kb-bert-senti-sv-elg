@@ -3,7 +3,7 @@
 This git repository contains [ELG compatible](https://european-language-grid.readthedocs.io/en/stable/all/A3_API/LTInternalAPI.html) Flask based REST API for the BERT base fine-tuned for Swedish Sentiment Analysis
 
 [Huggingface SSA](https://huggingface.co/marma/bert-base-swedish-cased-sentiment) contains the model that was trained on ~20k of App Store reviews in Swedish.
-Original author: Martin Malmsten from the National Library of Sweden / KBLab, published under ??? license. The model was fine-tuned based on one of the models available under [KB Swedish bert models](https://github.com/Kungbib/swedish-bert-models).
+Original author: Martin Malmsten from the National Library of Sweden / KBLab, published under CC0 license (personal communication). The model was fine-tuned based on one of the models available under [KB Swedish bert models](https://github.com/Kungbib/swedish-bert-models).
 
 
 This ELG API was developed in EU's CEF project: [Microservices at your service](https://www.lingsoft.fi/en/microservices-at-your-service-bridging-gap-between-nlp-research-and-industry)
