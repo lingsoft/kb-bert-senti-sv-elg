@@ -64,7 +64,7 @@ Content-type : application/json
 #### BODY
 
 For text request
-```json
+```
 {
   "type":"text",
   "content": text to be analyzed for the Sentiment Analysis task
@@ -73,7 +73,7 @@ For text request
 
 #### RESPONSE
 
-```json
+```
 {
   "response":{
     "type":"classification",
@@ -87,8 +87,6 @@ For text request
   }
 }
 ```
-
-### Response structure
 
 - `class`: (str)
   - either `POSITIVE` or `NEGATIVE`
@@ -121,4 +119,3 @@ curl --location --request POST 'http://localhost:8000/process' \
   }
 }
 ```
-
