@@ -13,14 +13,14 @@ class SwedishSentCLF(FlaskService):
         internal exception while parsing text"""
         if utils.is_exceed_limit(text):
             tooLargeMessage = StandardMessages.\
-                    genegenerate_elg_request_too_larger()
+                    generate_elg_request_too_large()
             return Failure(errors=[tooLargeMessage])
         try:
             res = utils.clf_func_elg(text)
         except Exception as err:
             internalErrorMessage = StandardMessages.\
                     generate_elg_service_internalerror(
-                        detail={'Internal error': str(err)})
+                        params=[str(err)])
             return Failure(errors=[internalErrorMessage])
         return res
 
@@ -31,18 +31,6 @@ class SwedishSentCLF(FlaskService):
             return ClassificationResponse(classes=[res])
         else:  # failure
             return res
-
-    def process_structured_text(self, request: StructuredTextRequest):
-        texts = request.texts
-        res = []
-        warnings = []
-        for i, text in enumerate(texts):
-            result = self.process_single_text(text.content)
-            if isinstance(result, ClassesResponse):
-                res.append(result)
-            else:  # failire
-                warnings.append(result)
-        return ClassificationResponse(classes=res, warnings=warnings)
 
 
 flask_service = SwedishSentCLF("sent-sv")

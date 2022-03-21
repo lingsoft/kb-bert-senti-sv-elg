@@ -71,18 +71,6 @@ For text request
 }
 ```
 
-Or stucturedText request
-```json
-{
-  "type":"structuredText",
-  "texts":[
-    {
-      "content":"The text of this node",
-    },
-  ]
-}
-
-
 #### RESPONSE
 
 ```json
@@ -113,8 +101,8 @@ Or stucturedText request
 curl --location --request POST 'http://localhost:8000/process' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"type":"structuredText",
-"texts": [{"content":"Jag gillar det inte."},{"content": "Lätt att boka. Resan blev inställt. Fick tillbaka pengar. Topp service"}]
+"type":"text",
+"content": "Lätt att boka. Resan blev inställt. Fick tillbaka pengar. Topp service"
 }'
 ```
 
@@ -124,12 +112,7 @@ curl --location --request POST 'http://localhost:8000/process' \
 {
   "response": {
     "type": "classification",
-    "warnings": [],
     "classes": [
-      {
-        "class": "NEGATIVE",
-        "score": 0.9969109892845154
-      },
       {
         "class": "POSITIVE",
         "score": 0.9993164539337158
